@@ -1,0 +1,20 @@
+service: simple-node-serve
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 2048
+  stage: dev
+  timeout: 15
+  region: us-east-1
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http: ANY /{proxy+}
+      - http: ANY /
+    environment:
+      TEXT: I am from Backend
+      PORT: 5000

@@ -1,0 +1,14 @@
+{
+    "scripts": {
+      "start": "node peter.js",
+      "dev": "nodemon peter.js",
+      "deploy": "serverless deploy"
+    },
+    "dependencies": {
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.2",
+      "express": "^4.18.1",
+      "serverless-http": "^3.0.2"
+    },
+    "name": "basic-node-server"
+  }
